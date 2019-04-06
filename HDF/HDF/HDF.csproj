@@ -101,6 +101,7 @@
     </Compile>
     <Compile Include="Game.cs" />
     <Compile Include="Hair.cs" />
+    <Compile Include="interfaces.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
