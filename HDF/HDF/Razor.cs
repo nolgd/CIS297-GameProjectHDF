@@ -5,23 +5,32 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Graphics.Canvas;
 
-
 using Windows.UI;
 
 namespace HDF
 {
     
-
     class Razor : IDrawable, ICollidable,IDestroyable
     {
         private int x;
         private int y;
+        public int width;
+        public int height;
 
         private int xVelocity;
         private int yVelocity;
 
         public Color color;
 
+        public Razor(int x1,int y1, Color color1,int height1,int width1)
+        {
+            x = x1;
+            y = y1;
+            color = color1;
+            height = height1;
+            width = width1;
+        }
+        
         public bool CollidesLeftEdge(int x, int y)
         {
             throw new NotImplementedException();
@@ -44,7 +53,7 @@ namespace HDF
 
         public void Draw(CanvasDrawingSession canvas)
         {
-            canvas.DrawRectangle(x, y, 60, 60, color);
+            canvas.DrawRectangle(x, y, width,height , color);
         }
 
         public void update()
