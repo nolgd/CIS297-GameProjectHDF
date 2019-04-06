@@ -1,8 +1,10 @@
-﻿using System;
+﻿
+using Microsoft.Graphics.Canvas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Windows.Gaming.Input;
+using Windows.UI;
 
 namespace HDF
 {
@@ -17,6 +19,22 @@ namespace HDF
 
         private Razor razor;
         private List<IDrawable> drawables;
+
+        private Gamepad controller;
+
+        public Game()
+        {
+
+
+        }
+
+        public bool update()
+        {
+
+            return true;
+        }
+
+
 
 
     }
