@@ -11,26 +11,27 @@ namespace HDF
 {
     class Barrier : IDrawable, ICollidable
     {
-        public RotateTransform Rotate;
+        public RotateTransform rotate;
 
         public int X { get; set; }
         public int Y { get; set; }
         public int Width { get; set; }
         public int Height { get; set; }
         public Color Color { get; set; }
-        public bool rotateClockwise = false;
+        public bool rotateClockwise { get; set; }
 
-        Barrier()
+        public Barrier()
         {
+            rotate = new RotateTransform();
             X = 500;
             Y = 200;
             Width = 5;
             Height = 2;
             Color =  Colors.Black;
-
-            Rotate.CenterX = 500;
-            Rotate.CenterY = 500;
-            Rotate.Angle = 0;
+            rotateClockwise = false;
+            rotate.CenterX = 500;
+            rotate.CenterY = 500;
+            rotate.Angle = 0;
         }
 
         public bool CollidesLeftEdge(int x, int y)
@@ -69,11 +70,11 @@ namespace HDF
 
             if (rotateClockwise)
             {
-                Rotate.Angle += 1;
+               rotate.Angle += 1;
             }
             else if (!rotateClockwise)
             {
-                Rotate.Angle -= 1;
+                rotate.Angle -= 1;
             }
         
         }

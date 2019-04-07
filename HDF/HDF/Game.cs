@@ -19,25 +19,27 @@ namespace HDF
 
         private Razor razor;
         private Hair hair;
+        public Barrier barrier { get; set; }
         private List<IDrawable> drawables;
 
         private Gamepad controller;
 
         public Game()
         {
+            barrier = new Barrier();
             razor = new Razor(100, 100, Colors.White, 50, 50,2,2);
             hair = new Hair(150, 200, Colors.Brown, 60, 60);
             drawables = new List<IDrawable>();
             drawables.Add(razor);
             drawables.Add(hair);
-
+            drawables.Add(barrier);
         }
 
         public bool update()
         {
             razor.update();
             hair.update();
-            
+            barrier.Update();
             return true;
         }
 
