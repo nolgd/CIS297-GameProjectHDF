@@ -22,13 +22,15 @@ namespace HDF
 
         public Color color;
 
-        public Razor(int x1,int y1, Color color1,int height1,int width1)
+        public Razor(int x1,int y1, Color color1,int height1,int width1,int xVelocity,int yVelocity)
         {
             x = x1;
             y = y1;
             color = color1;
             height = height1;
             width = width1;
+            this.xVelocity = xVelocity;
+            this.yVelocity = yVelocity;
         }
         
         public bool CollidesLeftEdge(int x, int y)
