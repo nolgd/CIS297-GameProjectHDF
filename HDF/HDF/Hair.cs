@@ -4,11 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Graphics.Canvas;
-
+using Windows.UI;
 namespace HDF
 {
-    class Hair : IDrawable, ICollidable
+    class Hair : IDrawable, ICollidable,IDestroyable
     {
+        private int x;
+        private int y;
+        public int width;
+        public int height;
+
+       
+        public Color color;
+
+        public Hair(int x1, int y1, Color color1, int height1, int width1)
+        {
+            x = x1;
+            y = y1;
+            color = color1;
+            height = height1;
+            width = width1;
+        }
+
         public bool CollidesLeftEdge(int x, int y)
         {
             throw new NotImplementedException();
@@ -31,7 +48,12 @@ namespace HDF
 
         public void Draw(CanvasDrawingSession canvas)
         {
-            throw new NotImplementedException();
+            canvas.DrawRectangle(x, y, width, height, color);
+        }
+
+        public void update()
+        {
+            
         }
     }
 }

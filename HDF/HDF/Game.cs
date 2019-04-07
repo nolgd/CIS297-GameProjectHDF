@@ -18,23 +18,36 @@ namespace HDF
         private Random random;
 
         private Razor razor;
+        private Hair hair;
         private List<IDrawable> drawables;
 
         private Gamepad controller;
 
         public Game()
         {
-
+            razor = new Razor(15, 15, Colors.White, 50, 50,2,2);
+            hair = new Hair(150, 200, Colors.Brown, 60, 60);
+            drawables = new List<IDrawable>();
+            drawables.Add(razor);
+            drawables.Add(hair);
 
         }
 
         public bool update()
         {
-
+            razor.update();
+            hair.update();
+            
             return true;
         }
 
-
+        public void DrawGame(CanvasDrawingSession canvas)
+        {
+            foreach (var drawable in drawables)
+            {
+                drawable.Draw(canvas);
+            }
+        }
 
 
     }
