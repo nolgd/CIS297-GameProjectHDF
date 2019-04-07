@@ -17,8 +17,8 @@ namespace HDF
 
         private Random random;
 
-        private Razor razor;
-        private Hair hair;
+        private Fang razor;
+        private Block hair;
         public Barrier barrier { get; set; }
         private List<IDrawable> drawables;
 
@@ -27,8 +27,8 @@ namespace HDF
         public Game()
         {
             barrier = new Barrier();
-            razor = new Razor(100, 100, Colors.White, 50, 50,2,2);
-            hair = new Hair(150, 200, Colors.Brown, 60, 60);
+            razor = new Fang(100, 100, Colors.White, 50, 50,2,2);
+            hair = new Block(150, 200, Colors.Brown, 60, 60);
             drawables = new List<IDrawable>();
             drawables.Add(razor);
             drawables.Add(hair);
