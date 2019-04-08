@@ -70,11 +70,11 @@ namespace HDF
 
             if (rotateClockwise)
             {
-               rotate.Angle += 1;
+              // rotate.Angle = 1;
             }
             else if (!rotateClockwise)
             {
-                rotate.Angle -= 1;
+                //rotate.Angle = 1;
             }
         
         }
