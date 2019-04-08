@@ -70,5 +70,20 @@ namespace HDF
                 game.barrier.rotateAtAllCounter = false;
             }
         }
+
+        private void ButtonPlay_Click(object sender, RoutedEventArgs e)
+        {
+            //loads game screen
+        }
+
+        private void Canvas_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

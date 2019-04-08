@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using Microsoft.Graphics.Canvas;
 using Windows.UI;
 using Windows.UI.Xaml.Media;
-using System.Drawing;
 
 namespace HDF
 {
@@ -21,23 +20,16 @@ namespace HDF
             public int height;
         };
         public RotateTransform rotate;
-        
+
         public int X { get; set; }
         public int Y { get; set; }
         public int Width { get; set; }
         public int Height { get; set; }
-        public Windows.UI.Color Color { get; set; }
+        public Color Color { get; set; }
         public bool rotateClockwise { get; set; }
-        public bool rotateAtAllCounter { get; set; }
-        public bool rotateAtAllClocker{ get; set; }
-        private int startDraw;
-        private List<rectD> circle;
-        private int speed;
-        private int length;
+
         public Barrier()
         {
-            startDraw = 0;
-            circle = new List<rectD>();
             rotate = new RotateTransform();
             Rectangle rect1 = new Rectangle();
             Rectangle rect2 = new Rectangle();
