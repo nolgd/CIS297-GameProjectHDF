@@ -15,25 +15,23 @@
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
 
-        <Image x:Name="TitleImage" HorizontalAlignment="Center" Height="1046" VerticalAlignment="Top" Source="HairDefenseForceWordDoc.PNG" Width="1552" Margin="0,0,0,0"/>
+        <Image x:Name="TitleImage" HorizontalAlignment="Left" Height="1080" VerticalAlignment="Center" Source="HairDefenseForceWordDoc.PNG" Width="2344" Grid.ColumnSpan="2"/>
 
-        <canvas:CanvasAnimatedControl x:Name="canvas" Draw="Canvas_Draw" Update="Canvas_Update" Loaded="Canvas_Loaded" Margin="1826,-37,-1695,37" Grid.ColumnSpan="2"/>
-        <Button x:Name="buttonPlay" Content="PLAY" HorizontalAlignment="Center" Margin="0,516,0,0" VerticalAlignment="Top" Height="160" Width="382" Click="ButtonPlay_Click" FontSize="100" RenderTransformOrigin="0.499,-1.259"/>
-        <Image x:Name="Fire1" HorizontalAlignment="Left" Height="134" VerticalAlignment="Top" Width="136" Source="Fire_gif.gif" Margin="1196,341,0,0" RenderTransformOrigin="-0.915,0.168"/>
-        <Image x:Name="Razor1" HorizontalAlignment="Left" Height="317" VerticalAlignment="Top" Width="152" Source="Razor.png" Margin="1179,378,0,0" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
-
-            <Image.RenderTransform>
-                <CompositeTransform Rotation="-130"/>
-            </Image.RenderTransform>
-        </Image>
-        <Image x:Name="Fire2" HorizontalAlignment="Left" Height="134" VerticalAlignment="Top" Width="136" Source="Fire_gif.gif" Margin="232,341,0,0" RenderTransformOrigin="-0.915,0.168"/>
-        <Image x:Name="Razor2" HorizontalAlignment="Left" Height="317" VerticalAlignment="Top" Width="152" Source="Razor.png" Margin="225,378,0,0" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
-
+        <canvas:CanvasAnimatedControl x:Name="canvas" Draw="Canvas_Draw" Update="Canvas_Update" Loaded="Canvas_Loaded" Margin="-2158,56,2289,-56" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Button x:Name="buttonPlay" Content="PLAY" HorizontalAlignment="Center" Margin="0,749,0,0" VerticalAlignment="Top" Height="232" Width="460" Click="ButtonPlay_Click" FontSize="100" RenderTransformOrigin="0.499,-1.259"/>
+        <Image x:Name="Fire1" HorizontalAlignment="Left" Height="358" VerticalAlignment="Top" Width="278" Source="Fire_gif.gif" Margin="1310,401,0,0" RenderTransformOrigin="-0.915,0.168"/>
+        <Image x:Name="Fire2" HorizontalAlignment="Left" Height="358" VerticalAlignment="Top" Width="278" Source="Fire_gif.gif" Margin="335,401,0,0" RenderTransformOrigin="-0.915,0.168" />
+        <Image x:Name="Razor1" HorizontalAlignment="Left" Height="291" VerticalAlignment="Top" Width="327" Source="UpscaledRazor.png" Margin="316,492,0,0" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
             <Image.RenderTransform>
                 <CompositeTransform Rotation="-45"/>
             </Image.RenderTransform>
         </Image>
 
+        <Image x:Name="Razor2" HorizontalAlignment="Left" Height="291" VerticalAlignment="Top" Width="327" Source="UpscaledRazor.png" Margin="1271,497,0,0" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <Image.RenderTransform>
+                <CompositeTransform Rotation="-130"/>
+            </Image.RenderTransform>
+        </Image>
 
 
     </Grid>
