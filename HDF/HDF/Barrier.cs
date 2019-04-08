@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 using Microsoft.Graphics.Canvas;
 using Windows.UI;
 using Windows.UI.Xaml.Media;
+using System.Drawing;
 
 namespace HDF
 {
 
-    public class Barrier : IDrawable, ICollidable,IUpdateable
+    public class Barrier : IDrawable,IUpdateable
     {
         public struct rectD
         {
@@ -25,11 +26,18 @@ namespace HDF
         public int Y { get; set; }
         public int Width { get; set; }
         public int Height { get; set; }
-        public Color Color { get; set; }
+        public Windows.UI.Color Color { get; set; }
         public bool rotateClockwise { get; set; }
+        public bool rotateAtAllCounter;
+        public bool rotateAtAllClocker;
+        private int speed;
+        private int length;
+        List<rectD> circle;
+        private int startDraw;
 
         public Barrier()
         {
+            circle = new List<rectD>();
             rotate = new RotateTransform();
             Rectangle rect1 = new Rectangle();
             Rectangle rect2 = new Rectangle();
@@ -47,7 +55,7 @@ namespace HDF
             rotate.Angle = 0;
             length = 70;
             speed = 5;
-
+            startDraw = 0;
             for(float i = 0; i < 2*Math.PI; i=i+0.015f)
             {
                 rectD temp1 = new rectD();
