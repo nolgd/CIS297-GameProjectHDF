@@ -5,9 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Graphics.Canvas;
 using Windows.UI;
+using System.Drawing;
 namespace HDF
 {
-    class Block : IDrawable, ICollidable,IDestroyable
+    public class Block : IDrawable, ICollidable,IDestroyable,IUpdateable
     {
         private int x;
         private int y;
@@ -15,9 +16,9 @@ namespace HDF
         public int height;
 
        
-        public Color color;
+        public Windows.UI.Color color;
 
-        public Block(int x1, int y1, Color color1, int height1, int width1)
+        public Block(int x1, int y1, Windows.UI.Color color1, int height1, int width1)
         {
             x = x1;
             y = y1;
@@ -26,34 +27,39 @@ namespace HDF
             width = width1;
         }
 
-        public bool CollidesLeftEdge(int x, int y)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool CollidesTopEdge(int x, int y)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool ColllidesRightEdge(int x, int y)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool CoolidesBottomEdge(int x, int y)
-        {
-            throw new NotImplementedException();
-        }
+        
 
         public void Draw(CanvasDrawingSession canvas)
         {
             canvas.DrawRectangle(x, y, width, height, color);
         }
 
-        public void update()
+        public bool update()
         {
-            
+
+
+            return true;
+        }
+
+        public bool Collides(Rectangle rect)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class BlockGenerator
+    {
+        Random random;
+
+        public static Block GenerateBlock(Windows.UI.Color color)
+        {
+            Random random = new Random();
+            int x =random.Next(700);
+            int y = random.Next(700);
+
+            Block block=new Block(x,y,color,60,60);
+
+            return block;
         }
     }
 }

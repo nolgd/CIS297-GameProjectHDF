@@ -32,7 +32,7 @@ namespace HDF
             this.InitializeComponent();
             game = new Game();
             Window.Current.CoreWindow.KeyDown += Canvas_KeyDown;
-            //Window.Current.CoreWindow.KeyUp += Canvas_KeyUp;
+            Window.Current.CoreWindow.KeyUp += Canvas_KeyUp;
         }
         private void Canvas_Draw(ICanvasAnimatedControl sender, CanvasAnimatedDrawEventArgs args)
         {
@@ -45,27 +45,30 @@ namespace HDF
 
         private void Canvas_KeyDown(Windows.UI.Core.CoreWindow sender, Windows.UI.Core.KeyEventArgs e)
         {
+            
             if (e.VirtualKey == Windows.System.VirtualKey.Left)
             {
+                game.barrier.rotateAtAllClocker = true;
                 game.barrier.rotateClockwise = true;
             }
             else if (e.VirtualKey == Windows.System.VirtualKey.Right)
             {
+                game.barrier.rotateAtAllCounter = true;
                 game.barrier.rotateClockwise = false;
             }
         }
         
         private void Canvas_KeyUp(Windows.UI.Core.CoreWindow sender, Windows.UI.Core.KeyEventArgs e)
         {
-            /*
+            
             if (e.VirtualKey == Windows.System.VirtualKey.Left)
             {
-                pong.SetPaddleTravelingLeftward(false);
+                game.barrier.rotateAtAllClocker = false;
             }
             else if (e.VirtualKey == Windows.System.VirtualKey.Right)
             {
-                pong.SetPaddleTravelingRightward(false);
-            }*/
+                game.barrier.rotateAtAllCounter = false;
+            }
         }
     }
 }
