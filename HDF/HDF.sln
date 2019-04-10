@@ -8,6 +8,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6A54DDB2-2F54-4E2F-BD3A-A6157A63C9EF}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\..\..\Pictures\Fire_gif.gif = ..\..\..\..\Pictures\Fire_gif.gif
+		..\..\..\..\Downloads\flame-gif.gif = ..\..\..\..\Downloads\flame-gif.gif
+		HDF\Assets\FlameLong.gif = HDF\Assets\FlameLong.gif
+		HDF\Assets\FlameLong.html = HDF\Assets\FlameLong.html
 		..\..\..\..\Pictures\HairDefenseDorceWordDoc.PNG = ..\..\..\..\Pictures\HairDefenseDorceWordDoc.PNG
 		..\..\..\..\Pictures\HairDefenseForceWhite.jpg = ..\..\..\..\Pictures\HairDefenseForceWhite.jpg
 		..\..\..\..\Pictures\HairDefenseForceWordDoc.png = ..\..\..\..\Pictures\HairDefenseForceWordDoc.png
