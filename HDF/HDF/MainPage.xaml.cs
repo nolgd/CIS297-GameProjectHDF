@@ -74,6 +74,9 @@ namespace HDF
         private void ButtonPlay_Click(object sender, RoutedEventArgs e)
         {
             //loads game screen
+
+            BlankPage1 blankpage = new BlankPage1();
+            this.Content = blankpage;
         }
 
         private void Canvas_Loaded(object sender, RoutedEventArgs e)
