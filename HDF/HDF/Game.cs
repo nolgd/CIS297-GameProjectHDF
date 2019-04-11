@@ -14,7 +14,7 @@ namespace HDF
         public static int TOP_EDGE = 10;
         public static int RIGHT_EDGE = 790;
         public static int BOTTOM_EDGE = 450;
-
+        private int spawn;
         private Random random;
         
         private Fang razor;
@@ -26,6 +26,7 @@ namespace HDF
 
         public Game()
         {
+            spawn = 0;
             barrier = new Barrier();
             razor = new Fang(100, 100, Colors.White, 50, 50,2,2,barrier);
             hair = new Block(150, 200, Colors.Brown, 60, 60);
@@ -41,6 +42,14 @@ namespace HDF
 
         public bool update()
         {
+            spawn++;
+            if (spawn == 50)
+            {
+                spawn = 0;
+                drawables.Add(FangGenerator.GenerateFang(Colors.White, barrier));
+            }
+
+
             foreach(var updateable in drawables)
             {
                 if (!updateable.update())
