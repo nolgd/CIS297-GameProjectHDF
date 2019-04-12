@@ -53,8 +53,8 @@ namespace HDF
             rotate.CenterX = 500;
             rotate.CenterY = 500;
             rotate.Angle = 0;
-            length = 70;
-            speed = 5;
+            length = 105;
+            speed = 7;
             startDraw = 0;
             for(float i = 0; i < 2*Math.PI; i=i+0.015f)
             {

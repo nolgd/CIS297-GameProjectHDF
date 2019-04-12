@@ -10,21 +10,23 @@ namespace HDF
 {
     public class Block : IDrawable, ICollidable,IDestroyable,IUpdateable
     {
-        private int x;
-        private int y;
+        Rectangle rect;
+        private float x;
+        private float y;
         public int width;
         public int height;
 
        
         public Windows.UI.Color color;
 
-        public Block(int x1, int y1, Windows.UI.Color color1, int height1, int width1)
+        public Block(float x1, float y1, Windows.UI.Color color1, int height1, int width1)
         {
             x = x1;
             y = y1;
             color = color1;
             height = height1;
             width = width1;
+            rect = new Rectangle((int)x1, (int)y1, height1, width1);
         }
 
         
@@ -36,14 +38,18 @@ namespace HDF
 
         public bool update()
         {
-
+            
 
             return true;
         }
 
-        public bool Collides(Rectangle rect)
+        public bool Collides(Rectangle rect2)
         {
-            throw new NotImplementedException();
+            if (rect.IntersectsWith(rect2))
+            {
+                return true;
+            }
+            return false;
         }
     }
 

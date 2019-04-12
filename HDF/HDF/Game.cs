@@ -22,6 +22,7 @@ namespace HDF
         public Barrier barrier { get; set; }
         private List<IUpdateable> drawables;
         private List<IUpdateable> deleteables;
+        private List<Fang> fangs;
         private Gamepad controller;
 
         public Game()
@@ -32,10 +33,22 @@ namespace HDF
             hair = new Block(150, 200, Colors.Brown, 60, 60);
             drawables = new List<IUpdateable>();
             deleteables = new List<IUpdateable>();
-            
+            fangs = new List<Fang>();
+            for (float loop = 0; loop < 5; loop++)
+            {
+                for (float i = 0; i < 2 * Math.PI; i = i + 0.3f)
+                {
+                    float xx = (float)(960 + 60*loop* System.Math.Cos(i));
+                    float yy = (float)(540 + 60*loop * System.Math.Sin(i));
+                    
+
+                    Block temp1 = new Block(xx, yy, Colors.Brown, 60, 60);
+
+                    drawables.Add(temp1);
+                }
+            }
+
             drawables.Add(razor);
-            drawables.Add(FangGenerator.GenerateFang(Colors.White,barrier));
-            drawables.Add(FangGenerator.GenerateFang(Colors.White, barrier));
             drawables.Add(hair);
             drawables.Add(barrier);
         }
@@ -43,11 +56,14 @@ namespace HDF
         public bool update()
         {
             spawn++;
-            if (spawn == 50)
+            if (spawn == 30)
             {
                 spawn = 0;
-                drawables.Add(FangGenerator.GenerateFang(Colors.White, barrier));
+                Fang temp = FangGenerator.GenerateFang(Colors.White, barrier);
+                drawables.Add(temp);
+                fangs.Add(temp);
             }
+
 
 
             foreach(var updateable in drawables)
@@ -58,6 +74,21 @@ namespace HDF
                 }
 
             }
+
+            foreach(var block in drawables)
+            {
+                if(block is Block)
+                {
+                    foreach(var fang in fangs)
+                    {
+                        if (block.Collides(fang.rect)){
+                            deleteables.Add(block);
+                        }
+                    }
+                }
+            }
+
+
             if (deleteables.Count() > 0)
             {
                 foreach (var deletable in deleteables)
@@ -65,13 +96,7 @@ namespace HDF
                     drawables.Remove(deletable);
                 }
             }
-            /*
-            if (!razor.update())
-            {
-                drawables.Remove(razor);
-            }
-            hair.update();
-            barrier.update();*/
+            
             return true;
         }
 

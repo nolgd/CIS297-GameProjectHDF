@@ -16,12 +16,12 @@ namespace HDF
             void Draw(CanvasDrawingSession canvas);
         }
 
-        public interface ICollidable
+        public interface ICollidable:IDrawable
         {
             bool Collides(Rectangle rect);
         }
         
-        public interface IUpdateable :IDrawable
+        public interface IUpdateable :ICollidable
     {
         bool update();
     }

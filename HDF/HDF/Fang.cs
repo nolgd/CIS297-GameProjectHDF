@@ -10,7 +10,7 @@ using System.Drawing;
 namespace HDF
 {
     
-    public class Fang : IDrawable,IUpdateable
+    public class Fang : IUpdateable
     {
 
         Barrier barrier;
@@ -21,7 +21,7 @@ namespace HDF
 
         private int xVelocity;
         private int yVelocity;
-        Rectangle rect;
+        public Rectangle rect { get; set; }
 
         public Windows.UI.Color color;
 
@@ -60,6 +60,11 @@ namespace HDF
         {
             canvas.DrawRectangle(x, y, width, height, color, 4);
             //throw new NotImplementedException();
+        }
+
+        public bool Collides(Rectangle rect)
+        {
+            throw new NotImplementedException();
         }
     }
 
