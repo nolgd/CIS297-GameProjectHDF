@@ -24,12 +24,14 @@ namespace HDF
     public sealed partial class BlankPage1 : Page
     {
         Game game;
+        int score;
         public BlankPage1()
         {
             this.InitializeComponent();
             game = new Game();
             Window.Current.CoreWindow.KeyDown += Canvas_KeyDown;
             Window.Current.CoreWindow.KeyUp += Canvas_KeyUp;
+            score = game.getScore();
         }
         private void Canvas_Draw(ICanvasAnimatedControl sender, CanvasAnimatedDrawEventArgs args)
         {

@@ -10,8 +10,12 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
 
     <Grid Background="Teal">
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="SPACEY.png"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="1046" VerticalAlignment="Top" Width="1123" Margin="545,273,0,0" Source="/Assets/CharneskyCutOut.png"/>
+        <canvas:CanvasAnimatedControl x:Name="canvas" Draw="Canvas_Draw" Update="Canvas_Update" Margin="10,0,-10,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"   />
+        
 
-        <canvas:CanvasAnimatedControl x:Name="canvas" Draw="Canvas_Draw" Update="Canvas_Update"   />
+
     </Grid>
 </Page>
 

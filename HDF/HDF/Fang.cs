@@ -7,6 +7,12 @@ using Microsoft.Graphics.Canvas;
 
 using Windows.UI;
 using System.Drawing;
+using Microsoft.Graphics;
+using Windows.Media;
+using Windows.UI.Xaml.Media.Imaging;
+using System.Numerics;
+using Windows.Foundation;
+
 namespace HDF
 {
     
@@ -59,7 +65,16 @@ namespace HDF
         public void Draw(CanvasDrawingSession canvas)
         {
             canvas.DrawRectangle(x, y, width, height, color, 4);
-            //throw new NotImplementedException();
+            canvas.DrawText("RAZOR.PNG", x + 2, y + 2, color);
+            //BitmapImage image = new BitmapImage(new Uri(@"UpscaledRazor.png"));
+            //CanvasBitmap imag = new CanvasBitmap();
+
+            //Image mig = Image.FromFile("UpscaledRazor.png");
+            //ICanvasImage fuck = ;
+            //const image = new Image();
+
+            //canvas.
+            ////throw new NotImplementedException();
         }
 
         public bool Collides(Rectangle rect)
@@ -169,6 +184,27 @@ namespace HDF
              //=// new Block(x, y, color, 60, 60);
 
             return fang;
+        }
+    }
+
+    public class WackyImage : ICanvasImage
+    {
+
+
+
+        public Rect GetBounds(ICanvasResourceCreator resourceCreator)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Rect GetBounds(ICanvasResourceCreator resourceCreator, Matrix3x2 transform)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
         }
     }
 

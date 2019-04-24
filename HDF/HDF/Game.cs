@@ -43,11 +43,11 @@ namespace HDF
             {
                 for (float i = 0; i < 2 * Math.PI; i = i + 0.3f)
                 {
-                    float xx = (float)(960 + 60*loop* System.Math.Cos(i));
-                    float yy = (float)(540 + 60*loop * System.Math.Sin(i));
+                    float xx = (float)(940 + 35*loop* System.Math.Cos(i));
+                    float yy = (float)(530 + 35*loop * System.Math.Sin(i));
                     
 
-                    Block temp1 = new Block(xx, yy, Colors.Brown, 60, 60);
+                    Block temp1 = new Block(xx, yy, Colors.SaddleBrown, 20, 20);
 
                     drawables.Add(temp1);
                     numBlocks++;
@@ -55,13 +55,19 @@ namespace HDF
             }
 
             drawables.Add(razor);
-            drawables.Add(hair);
             drawables.Add(barrier);
+        }
+
+        public int getScore()
+        {
+            return score;
         }
 
         public bool update()
         {
-            if (numBlocks > -1)
+            
+
+            if (numBlocks > 0)
             {
                 spawn++;
                 if (spawn >= 60 - score)
@@ -119,6 +125,9 @@ namespace HDF
             {
                 drawable.Draw(canvas);
             }
+            canvas.DrawText("Score: ", 0, 0, Windows.UI.Colors.Black);
+            canvas.DrawText(Convert.ToString(score),60,0,Windows.UI.Colors.Black);
+            canvas.DrawText(Convert.ToString(numBlocks), 60, 50, Windows.UI.Colors.Black);
         }
 
 

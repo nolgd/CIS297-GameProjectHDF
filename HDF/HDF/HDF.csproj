@@ -115,6 +115,13 @@
     <None Include="HDF_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\CharneskyCutOut.png" />
+    <Content Include="Assets\Pixel Charnesky.png" />
+    <Content Include="Assets\SPACE.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\SPACEY.PNG" />
+    <Content Include="Assets\UpscaledRazor.png" />
     <Content Include="Fire_gif.gif" />
     <Content Include="flame-gif.gif" />
     <Content Include="HairDefenseForceWordDoc.png" />

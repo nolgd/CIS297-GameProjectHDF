@@ -26,14 +26,16 @@ namespace HDF
             color = color1;
             height = height1;
             width = width1;
-            rect = new Rectangle((int)x1, (int)y1, height1, width1);
+            rect = new Rectangle((int)x1-20, (int)y1-20, height1+40, width1+40);
         }
 
         
 
         public void Draw(CanvasDrawingSession canvas)
         {
-            canvas.DrawRectangle(x, y, width, height, color);
+            canvas.DrawRectangle(x, y, width, height, color,20);
+            
+            
         }
 
         public bool update()
