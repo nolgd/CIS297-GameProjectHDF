@@ -59,13 +59,12 @@ namespace HDF
             for(float i = 0; i < 2*Math.PI; i=i+0.015f)
             {
                 rectD temp1 = new rectD();
-                temp1.x = (float)(960 + 400 * System.Math.Cos(i));
-                temp1.y = (float)(540 + 400 * System.Math.Sin(i));
+                temp1.x = (float)(960 + 375 * System.Math.Cos(i));
+                temp1.y = (float)(540 + 375 * System.Math.Sin(i));
                 temp1.width = 2;
                 temp1.height = 2;
                 circle.Add(temp1);
             }
-            
         }
 
 

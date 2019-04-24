@@ -75,11 +75,98 @@ namespace HDF
         public static Fang GenerateFang(Windows.UI.Color color,Barrier bar)
         {
             Random random = new Random();
-            int x = random.Next(700);
-            int y = random.Next(700);
-            int xvel = random.Next(10)+1;
-            int yvel = random.Next(10)+1;
-            Fang fang= new Fang(x,y,color,60,60,xvel,yvel,bar); //=// new Block(x, y, color, 60, 60);
+
+            int location = random.Next(8);
+            Fang fang;
+            if (location == 0)//clockwise around
+            {
+                int x = random.Next(0);
+                int y = random.Next(0);
+                int xvel = random.Next(10) + 1;
+                int yvel = random.Next(10) + 1;
+                fang = new Fang(x, y, color, 60, 60, xvel, yvel, bar);
+            }
+            else if(location == 1)
+            {
+
+                int x = 900;
+                x+=random.Next(120);
+                int y = 0;
+                int xvel = -5; 
+                xvel += random.Next(10) + 1;
+                int yvel = random.Next(10) + 1;
+                fang = new Fang(x, y, color, 60, 60, xvel, yvel, bar);
+            }
+            else if (location == 2)
+            {
+                int x = 1860;
+                x += random.Next(120);
+                int y = -50;
+                y += random.Next(100);
+                int xvel = -15;
+                xvel += random.Next(10) + 1;
+                int yvel = -15;
+                yvel += random.Next(10) + 1;
+                fang = new Fang(x, y, color, 60, 60, xvel, yvel, bar);
+            }
+            else if (location == 3)
+            {
+                int x = 1920;
+                int y = 480;
+                y += random.Next(120);
+                int xvel = -10;
+                xvel += random.Next(3) + 1;
+                int yvel = -2;
+                yvel += random.Next(4) + 1;
+                fang = new Fang(x, y, color, 60, 60, xvel, yvel, bar);
+            }
+            else if (location == 4)//bottom right
+            {
+                int x = 1860;
+                x += random.Next(120);
+                int y = 1030;
+                y += random.Next(100);
+                int xvel = -15;
+                xvel += random.Next(10) + 1;
+                int yvel = 2;
+                yvel += random.Next(10) + 1;
+                fang = new Fang(x, y, color, 60, 60, xvel, yvel, bar);
+            }
+            else if (location == 5)//bottom
+            {
+                int x = 900;
+                x += random.Next(120);
+                int y = 1080;
+                int xvel = -3;
+                xvel += random.Next(6) + 1;
+                int yvel = -15; 
+                yvel+=random.Next(10) + 1;
+                fang = new Fang(x, y, color, 60, 60, xvel, yvel, bar);
+            }
+            else if (location == 6)//bottom left
+            {
+                int x = -60;
+                x += random.Next(120);
+                int y = 1030;
+                y += random.Next(100);
+                int xvel = 0;
+                xvel += random.Next(10) + 1;
+                int yvel = 0;
+                yvel += random.Next(10) + 1;
+                fang = new Fang(x, y, color, 60, 60, xvel, yvel, bar);
+            }
+            else //left middle
+            {
+                int x = 0;
+                int y = 480;
+                y += random.Next(120);
+                int xvel = 0;
+                xvel += random.Next(10) + 1;
+                int yvel = -2;
+                yvel += random.Next(4) + 1;
+                fang = new Fang(x, y, color, 60, 60, xvel, yvel, bar);
+            }
+             //=// new Block(x, y, color, 60, 60);
 
             return fang;
         }

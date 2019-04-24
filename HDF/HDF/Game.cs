@@ -15,6 +15,8 @@ namespace HDF
         public static int RIGHT_EDGE = 790;
         public static int BOTTOM_EDGE = 450;
         private int spawn;
+        private int score;
+        private int numBlocks;
         private Random random;
         
         private Fang razor;
@@ -25,15 +27,18 @@ namespace HDF
         private List<Fang> fangs;
         private Gamepad controller;
 
+
         public Game()
         {
             spawn = 0;
+            numBlocks = 0;
             barrier = new Barrier();
             razor = new Fang(100, 100, Colors.White, 50, 50,2,2,barrier);
             hair = new Block(150, 200, Colors.Brown, 60, 60);
             drawables = new List<IUpdateable>();
             deleteables = new List<IUpdateable>();
             fangs = new List<Fang>();
+            score = 0;
             for (float loop = 0; loop < 5; loop++)
             {
                 for (float i = 0; i < 2 * Math.PI; i = i + 0.3f)
@@ -45,6 +50,7 @@ namespace HDF
                     Block temp1 = new Block(xx, yy, Colors.Brown, 60, 60);
 
                     drawables.Add(temp1);
+                    numBlocks++;
                 }
             }
 
@@ -55,49 +61,56 @@ namespace HDF
 
         public bool update()
         {
-            spawn++;
-            if (spawn == 30)
+            if (numBlocks > -1)
             {
-                spawn = 0;
-                Fang temp = FangGenerator.GenerateFang(Colors.White, barrier);
-                drawables.Add(temp);
-                fangs.Add(temp);
-            }
-
-
-
-            foreach(var updateable in drawables)
-            {
-                if (!updateable.update())
+                spawn++;
+                if (spawn >= 60 - score)
                 {
-                    deleteables.Add(updateable);
+                    spawn = 0;
+                    Fang temp = FangGenerator.GenerateFang(Colors.White, barrier);
+                    drawables.Add(temp);
+                    fangs.Add(temp);
                 }
 
-            }
 
-            foreach(var block in drawables)
-            {
-                if(block is Block)
+
+                foreach (var updateable in drawables)
                 {
-                    foreach(var fang in fangs)
+                    if (!updateable.update())
                     {
-                        if (block.Collides(fang.rect)){
-                            deleteables.Add(block);
+                        deleteables.Add(updateable);
+                        score++;
+                    }
+
+                }
+
+                foreach (var block in drawables)
+                {
+                    if (block is Block)
+                    {
+                        foreach (var fang in fangs)
+                        {
+                            if (block.Collides(fang.rect))
+                            {
+                                deleteables.Add(block);
+                                numBlocks--;
+                            }
                         }
                     }
                 }
-            }
 
 
-            if (deleteables.Count() > 0)
-            {
-                foreach (var deletable in deleteables)
+                if (deleteables.Count() > 0)
                 {
-                    drawables.Remove(deletable);
+                    foreach (var deletable in deleteables)
+                    {
+                        drawables.Remove(deletable);
+                    }
                 }
+
+                return true;
             }
-            
-            return true;
+            return false;
         }
 
         public void DrawGame(CanvasDrawingSession canvas)
