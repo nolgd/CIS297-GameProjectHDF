@@ -43,8 +43,8 @@ namespace HDF
             {
                 for (float i = 0; i < 2 * Math.PI; i = i + 0.3f)
                 {
-                    float xx = (float)(940 + 35*loop* System.Math.Cos(i));
-                    float yy = (float)(530 + 35*loop * System.Math.Sin(i));
+                    float xx = (float)(940 + 32*loop* System.Math.Cos(i));
+                    float yy = (float)(530 + 32*loop * System.Math.Sin(i));
                     
 
                     Block temp1 = new Block(xx, yy, Colors.SaddleBrown, 20, 20);
@@ -70,7 +70,7 @@ namespace HDF
             if (numBlocks > 0)
             {
                 spawn++;
-                if (spawn >= 60 - score)
+                if (spawn >= 70 - score/2)
                 {
                     spawn = 0;
                     Fang temp = FangGenerator.GenerateFang(Colors.White, barrier);
@@ -125,9 +125,9 @@ namespace HDF
             {
                 drawable.Draw(canvas);
             }
-            canvas.DrawText("Score: ", 0, 0, Windows.UI.Colors.Black);
-            canvas.DrawText(Convert.ToString(score),60,0,Windows.UI.Colors.Black);
-            canvas.DrawText(Convert.ToString(numBlocks), 60, 50, Windows.UI.Colors.Black);
+            canvas.DrawText("Score: ", 0, 0, Windows.UI.Colors.White);
+            canvas.DrawText(Convert.ToString(score),60,0,Windows.UI.Colors.White);
+           // canvas.DrawText(Convert.ToString(numBlocks), 60, 50, Windows.UI.Colors.White);
         }
 
 
