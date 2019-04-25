@@ -99,7 +99,7 @@ namespace HDF
                 int x = random.Next(0);
                 int y = random.Next(0);
                 int xvel = random.Next(10) + 1;
-                int yvel = random.Next(6) + 1;
+                int yvel = random.Next(3) + 1;
                 fang = new Fang(x, y, color, 60, 60, xvel, yvel, bar);
             }
             else if(location == 1)
@@ -121,7 +121,7 @@ namespace HDF
                 y += random.Next(100);
                 int xvel = -15;
                 xvel += random.Next(10) + 1;
-                int yvel = -10;
+                int yvel = 0;
                 yvel += random.Next(10) + 1;
                 fang = new Fang(x, y, color, 60, 60, xvel, yvel, bar);
             }
@@ -142,7 +142,7 @@ namespace HDF
                 x += random.Next(120);
                 int y = 1030;
                 y += random.Next(100);
-                int xvel = -15;
+                int xvel = -12;
                 xvel += random.Next(10) + 1;
                 int yvel = -10;
                 yvel += random.Next(5) + 1;
@@ -168,7 +168,7 @@ namespace HDF
                 y += random.Next(100);
                 int xvel = 0;
                 xvel += random.Next(10) + 1;
-                int yvel = 0;
+                int yvel = -10;
                 yvel += random.Next(6) + 1;
                 fang = new Fang(x, y, color, 60, 60, xvel, yvel, bar);
             }
