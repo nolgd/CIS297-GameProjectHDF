@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HDF", "HDF\HDF.csproj", "{0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6A54DDB2-2F54-4E2F-BD3A-A6157A63C9EF}"
 	ProjectSection(SolutionItems) = preProject
-		HDF\Assets\CharneskyVodka.jpg = HDF\Assets\CharneskyVodka.jpg
-		HDF\Assets\chipotle vodka charnesky.jpg = HDF\Assets\chipotle vodka charnesky.jpg
 		..\..\..\Pictures\Fire_gif.gif = ..\..\..\Pictures\Fire_gif.gif
 		..\..\..\Downloads\flame-gif.gif = ..\..\..\Downloads\flame-gif.gif
 		HDF\Assets\FlameLong.gif = HDF\Assets\FlameLong.gif
