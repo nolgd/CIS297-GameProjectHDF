@@ -20,14 +20,19 @@ namespace HDF
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Credits : Page
+    public sealed partial class BlankPage3 : Page
     {
-        public Credits()
+        public BlankPage3()
         {
             this.InitializeComponent();
         }
 
-        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBox2_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
