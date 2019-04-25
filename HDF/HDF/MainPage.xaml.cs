@@ -88,5 +88,19 @@ namespace HDF
         {
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            credits blankpage = new credits();
+            this.Content = blankpage;
+
+
+        }
+
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+            Controls blankpage = new Controls();
+            this.Content = blankpage;
+        }
     }
 }

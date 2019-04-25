@@ -22,7 +22,7 @@
         <Image x:Name="TitleImage" HorizontalAlignment="Left" Height="1080" VerticalAlignment="Center" Source="HairDefenseForceWordDoc.PNG" Width="2344" Grid.ColumnSpan="2" Margin="0,0,0,0" Grid.RowSpan="2"/>
 
         <canvas:CanvasAnimatedControl x:Name="canvas" Draw="Canvas_Draw" Update="Canvas_Update" Loaded="Canvas_Loaded" Margin="-2158,56,2289,-56" Grid.RowSpan="2"/>
-        <Button x:Name="buttonPlay" Content="PLAY" HorizontalAlignment="Center" Margin="0,579,0,0" VerticalAlignment="Top" Height="232" Width="460" Click="ButtonPlay_Click" FontSize="100" RenderTransformOrigin="0.499,-1.259"/>
+        <Button x:Name="buttonPlay" Content="PLAY" HorizontalAlignment="Center" Margin="0,285,0,0" VerticalAlignment="Top" Height="232" Width="460" Click="ButtonPlay_Click" FontSize="100" RenderTransformOrigin="0.499,-1.259"/>
         <Image x:Name="Fire1" HorizontalAlignment="Left" Height="358" VerticalAlignment="Top" Width="278" Source="Fire_gif.gif" Margin="1310,401,0,0" RenderTransformOrigin="-0.915,0.168"/>
         <Image x:Name="Fire2" HorizontalAlignment="Left" Height="358" VerticalAlignment="Top" Width="278" Source="Fire_gif.gif" Margin="335,401,0,0" RenderTransformOrigin="-0.915,0.168" />
         <Image x:Name="Razor1" HorizontalAlignment="Left" Height="291" VerticalAlignment="Top" Width="327" Source="UpscaledRazor.png" Margin="316,492,0,0" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
@@ -64,6 +64,8 @@
         <Image x:Name="FlameBorder23" HorizontalAlignment="Left" Width="278" Source="flame-gif.gif" Margin="1641,811,0,-89" RenderTransformOrigin="-0.915,0.168" Grid.RowSpan="2"/>
         <Image x:Name="FlameBorder24" HorizontalAlignment="Left" Width="278" Source="flame-gif.gif" Margin="1715,811,0,-89" RenderTransformOrigin="-0.915,0.168" Grid.ColumnSpan="2" Grid.RowSpan="2" VerticalAlignment="Stretch"/>
         <Image x:Name="FlameBorder25" HorizontalAlignment="Left" Width="278" Source="flame-gif.gif" Margin="1787,811,0,-89" RenderTransformOrigin="-0.915,0.168" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Button x:Name="button" Content="Credits" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="804,596,0,0" FontSize="80" Click="Button_Click" Height="122" Width="315"/>
+        <Button x:Name="button1" Content="Controls" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,744,0,0" FontSize="80" Click="Button1_Click"/>
 
 
 

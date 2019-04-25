@@ -69,5 +69,17 @@ namespace HDF
                 game.barrier.rotateAtAllCounter = false;
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            BlankPage1 page = new BlankPage1();
+            this.Content = page;
+        }
+
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+            MainPage page = new MainPage();
+            this.Content = page;
+        }
     }
 }

@@ -39,12 +39,12 @@ namespace HDF
             deleteables = new List<IUpdateable>();
             fangs = new List<Fang>();
             score = 0;
-            for (float loop = 0; loop < 5; loop++)
+            for (float loop = 0; loop < 6; loop++)
             {
                 for (float i = 0; i < 2 * Math.PI; i = i + 0.3f)
                 {
-                    float xx = (float)(940 + 32*loop* System.Math.Cos(i));
-                    float yy = (float)(530 + 32*loop * System.Math.Sin(i));
+                    float xx = (float)(940 + 29*loop* System.Math.Cos(i));
+                    float yy = (float)(510 + 29*loop * System.Math.Sin(i));
                     
 
                     Block temp1 = new Block(xx, yy, Colors.SaddleBrown, 20, 20);

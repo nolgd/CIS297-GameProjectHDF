@@ -13,7 +13,9 @@
         <Image x:Name="image1" HorizontalAlignment="Left" Height="1080" VerticalAlignment="Top" Width="1920" Source="/Assets/SPACEY.png"/>
         <Image x:Name="image" HorizontalAlignment="Left" Height="1046" VerticalAlignment="Top" Width="1123" Margin="545,273,0,0" Source="/Assets/CharneskyCutOut.png"/>
         <canvas:CanvasAnimatedControl x:Name="canvas" Draw="Canvas_Draw" Update="Canvas_Update" Margin="10,0,-10,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"   />
-        
+        <Button x:Name="button" Content="Restart" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="20" Margin="1789,0,0,1030" Click="Button_Click" Background="Gray"/>
+        <Button x:Name="button1" Content="Main Menu" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" Margin="1789,50,0,0" Click="Button1_Click" Background="Gray"/>
+
 
 
     </Grid>

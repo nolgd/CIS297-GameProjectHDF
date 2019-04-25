@@ -66,6 +66,7 @@ namespace HDF
         {
             canvas.DrawRectangle(x, y, width, height, color, 4);
             canvas.DrawText("RAZOR.PNG", x + 2, y + 2, color);
+
             //BitmapImage image = new BitmapImage(new Uri(@"UpscaledRazor.png"));
             //CanvasBitmap imag = new CanvasBitmap();
 
@@ -157,7 +158,7 @@ namespace HDF
                 //int yvel = -13; 
                 //yvel+=random.Next(10) + 1;
                 //fang = new Fang(x, y, color, 60, 60, xvel, yvel, bar);
-                fang = new Fang(0, 0, color, 0, 0, 0, 0, bar);
+                fang = new Fang(6000, 6000, color, 0, 0, 0, 0, bar);
             }
             else if (location == 6)//bottom left
             {
