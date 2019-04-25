@@ -33,8 +33,8 @@ namespace HDF
             spawn = 0;
             numBlocks = 0;
             barrier = new Barrier();
-            razor = new Fang(100, 100, Colors.White, 50, 50,2,2,barrier);
-            hair = new Block(150, 200, Colors.Brown, 60, 60);
+            razor = new Fang(100, 100, Colors.Gray, 50, 50,2,2,barrier);
+            //hair = new Block(150, 200, Colors.Brown, 60, 60);
             drawables = new List<IUpdateable>();
             deleteables = new List<IUpdateable>();
             fangs = new List<Fang>();

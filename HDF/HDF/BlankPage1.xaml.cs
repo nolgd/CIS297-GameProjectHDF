@@ -14,6 +14,9 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using System.Threading.Tasks;
+using Microsoft.Graphics.Canvas;
+using Microsoft.Graphics.Canvas.Brushes;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace HDF
@@ -25,6 +28,7 @@ namespace HDF
     {
         Game game;
         int score;
+        private CanvasBitmap razorImage;
         public BlankPage1()
         {
             this.InitializeComponent();

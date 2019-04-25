@@ -48,7 +48,7 @@ namespace HDF
             Y = 200;
             Width = 5;
             Height = 2;
-            Color =  Colors.Black;
+            Color =  Colors.Red;
             rotateClockwise = false;
             rotate.CenterX = 500;
             rotate.CenterY = 500;

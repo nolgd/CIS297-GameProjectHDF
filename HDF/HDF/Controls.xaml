@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Background="Gray">
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Text="Use left and right to move the barrier and block the razors." TextWrapping="Wrap" VerticalAlignment="Top" FontSize="80" Margin="31,327,0,0" TextAlignment="Center"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Text="Use left and right to move the barrier to save Charnesky's bald spot!" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="80" Margin="0,327,0,0" TextAlignment="Center"/>
         <Button x:Name="button" Content="Back" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,601,0,0" FontSize="80" Click="Button_Click"/>
 
     </Grid>
