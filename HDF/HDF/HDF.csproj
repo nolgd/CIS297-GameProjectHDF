@@ -99,7 +99,13 @@
     <Compile Include="BlankPage1.xaml.cs">
       <DependentUpon>BlankPage1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BlankPage2.xaml.cs">
+      <DependentUpon>BlankPage2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Block.cs" />
+    <Compile Include="credits.xaml.cs">
+      <DependentUpon>credits.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Fang.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="interfaces.cs" />
@@ -141,6 +147,14 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="BlankPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BlankPage2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="credits.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
