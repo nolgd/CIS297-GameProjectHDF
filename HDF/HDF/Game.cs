@@ -27,7 +27,6 @@ namespace HDF
         private List<Fang> fangs;
         private Gamepad controller;
 
-
         public Game()
         {
             spawn = 0;
@@ -53,7 +52,6 @@ namespace HDF
                     numBlocks++;
                 }
             }
-
             drawables.Add(razor);
             drawables.Add(barrier);
         }
