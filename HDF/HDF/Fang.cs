@@ -66,12 +66,11 @@ namespace HDF
         {
             canvas.DrawRectangle(x, y, width, height, color, 4);
             canvas.DrawText("RAZOR.PNG", x + 2, y + 2, color);
-                        //BitmapImage image = new BitmapImage(new Uri(@"UpscaledRazor.png"));
+            //BitmapImage image = new BitmapImage(new Uri(@"UpscaledRazor.png"));
             //CanvasBitmap imag = new CanvasBitmap();
 
             //Image mig = Image.FromFile("UpscaledRazor.png");
-           // canvas.DrawImage(mig,x,y);
-           // ICanvasImage fuck = ;
+            //ICanvasImage fuck = ;
             //const image = new Image();
 
             //canvas.
