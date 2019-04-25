@@ -154,7 +154,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-< HEAD
+<<<<<<< HEAD
     <Page Include="credits.xaml">
 =======
     <Page Include="BlankPage2.xaml">
@@ -162,6 +162,7 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="BlankPage3.xaml">
+>>>>>>> idkmanthisprojectisalmostdue
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
